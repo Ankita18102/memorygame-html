@@ -144,8 +144,8 @@ body {
 /* Responsive Styles */
 @media only screen and (max-width: 600px) {
   .board {
-      height: auto;
-      width: 90%;
+      height: 80%;
+      width: 100%;
       max-width: 500px;
       margin: 0 auto;
   }
@@ -153,25 +153,25 @@ body {
       border-radius: 10%;
   }
   #sc {
-      width: 90%;
+      width: 50%;
       max-width: 400px;
       margin-left: auto;
       margin-right: auto;
   }
   #play {
-      font-size: 20px;
+      font-size: 12px;
   }
   #easybt, #hardbt, #mediumbt {
       font-size: 20px;
-      padding: 1px 16px;
+      padding: 1px 10px;
   }
   #last {
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
   }
   .bt {
-      font-size: 20px;
-      width: 90%;
+      font-size: 30px;
+      width: 50%;
       max-width: 400px;
   }
   #timerContainer {
