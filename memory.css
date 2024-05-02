@@ -1,69 +1,67 @@
 html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Arima', cursive;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arima', cursive;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap');
+
 body {
-    background-image: url("bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 .board {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    gap: 10px;
-    height: 850px;
-    width: 500px;  
-     
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 10px;
+  height: 850px;
+  width: 500px;  
 }
 
 .box {
-    
-    background: #98fb98;
-    border-radius: 20%;
-
+  background: #98fb98;
+  border-radius: 20%;
 }
 
-  .board:hover{
-    cursor: pointer;
-  }
-  #sc{
-    grid-column-start: span 5;
-    background: #EAD1DC;
-    border-radius: 90px;
-    color: white;
-    text-align: center;
-    align-items: center;
-    line-height: 60px;
-    height: 60px;
-    font-size: 30px;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-left: 49px;
-  }
-  
-  
-  #play{
-    color: purple;
-    grid-column-start: span 5;
-    text-align: center;
-    align-items: center;
-    font-size: 30px;
-    margin-bottom: 0px;
-  }
+.board:hover {
+  cursor: pointer;
+}
 
+#sc {
+  grid-column-start: span 5;
+  background: #EAD1DC;
+  border-radius: 90px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  line-height: 60px;
+  height: 60px;
+  font-size: 30px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: 49px;
+}
 
-#easybt, #hardbt,#mediumbt{
-  /* background: linear-gradient(to bottom right, #acf72a, #5de368); */
-  background-color:#acf72a;
+#play {
+  color: purple;
+  grid-column-start: span 5;
+  text-align: center;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+#easybt, #hardbt, #mediumbt {
+  background-color: #acf72a;
   border-radius: 60px;
   color: white;
   text-align: left;
@@ -76,35 +74,32 @@ body {
   cursor: pointer;
   border: #98fb98 1px solid;
   padding: 1px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
- 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
-
-#level{
-  display: flex;
-  justify-content: space-between;
-  grid-column-start: span 5;
-
-}
-#last{
+#level {
   display: flex;
   justify-content: space-between;
   grid-column-start: span 5;
 }
-.bt{
-  
-  /* background: linear-gradient(to bottom right, #acf72a, #5de368); */
-  background-color:#acf72a;
+
+#last {
+  display: flex;
+  justify-content: space-between;
+  grid-column-start: span 5;
+}
+
+.bt {
+  background-color: #acf72a;
   border-radius: 60px;
   color: white;
   text-align: center;
   align-items: center;
   line-height: 60px;
   border: transparent;
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Arima', cursive;
   margin-top: 25px;
   cursor: pointer;
@@ -116,6 +111,7 @@ display: inline-block;
 #timer {
   white-space: nowrap;
 }
+
 #timerContainer {
   color: purple;
   position: fixed;
@@ -124,8 +120,8 @@ display: inline-block;
   font-size: 20px;
   background-color: transparent;
   padding: 5px 10px;
-  
 }
+
 #winnerGif {
   position: absolute;
   top: 0;
@@ -139,7 +135,46 @@ display: inline-block;
   z-index: 9999;
   visibility: hidden; 
 }
+
 .difficultyButton.active {
   background-color: purple !important;
   font-size: 50px !important;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  .board {
+      height: auto;
+      width: 90%;
+      max-width: 500px;
+      margin: 0 auto;
+  }
+  .box {
+      border-radius: 10%;
+  }
+  #sc {
+      width: 90%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  #play {
+      font-size: 20px;
+  }
+  #easybt, #hardbt, #mediumbt {
+      font-size: 20px;
+      padding: 1px 16px;
+  }
+  #last {
+      flex-direction: column;
+      align-items: center;
+  }
+  .bt {
+      font-size: 20px;
+      width: 90%;
+      max-width: 400px;
+  }
+  #timerContainer {
+      font-size: 16px;
+  }
 }
